@@ -1,0 +1,22 @@
+#include<iostream>
+using namespace std;
+//将字符串逆序，第一个参数为逆序后的字符串，第二个参数为原来的字符串
+//这里的这个逆序的函数还未完成，或者说还有些问题
+void strrev(char **str,char *s)
+{
+	if(*s=='\0')
+		return ;
+	else{
+		strrev(str,s+1);
+		*(*str)++ = *s;
+	}
+}
+	
+int main()
+{
+	char s[] = "12345678";
+	char **str;
+	strrev(str,s);
+	cout<<*str;
+	return 0;
+}
