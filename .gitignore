@@ -1,0 +1,15 @@
+#include<iostream>
+using namespace std;
+int Strlen(const char *s)
+{
+	if(*s != '\0')
+		return Strlen(++s)+1;
+	else return 0;
+}
+
+int main()
+{
+	const char s[] = "12345678";
+	cout<<Strlen(s);
+	return 0;
+}
